@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>shopseed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/shopseed.css">
+  </head>
+  <body>
+    <nav class="bg-black">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="shopseed.html" class="d-flex align-items-center gap-1">
+          <img height="50px" class="rounded-5" src="images/logo/seed-logo (1).png" alt="">
+          <h5 class="text-white position-relative">shopSEED<span class="text-success position-absolute">Harmany</span></h5>
+        </a>
+        <div class="search-container none">
+         <input type="text" placeholder="Search shopSEED">
+         <button class="bg-success">
+           <i class="fa-solid fa-magnifying-glass text-white"></i>
+         </button>
+        </div>
+        <div class="d-flex align-items-center flex-shrink-0">
+         <a href="#" class="d-flex flex-column lh-1 returns">
+           Returns
+           <strong>& Orders</strong>
+         </a>
+         <a href="checkout.html" class="d-flex cart">
+           <div class="d-flex flex-column">
+             <span class="text-center cart-quantity"></span>
+             <img src="images/icons/cart-icon.png" alt="">
+           </div>
+           <span class="align-self-end fw-medium">Cart</span>
+         </a>
+        </div>
+      </div>
+      <div class="hidden-search-container mt-2">
+        <input type="text" placeholder="Search shopSEED">
+        <button class="bg-success">
+          <i class="fa-solid fa-magnifying-glass text-white"></i>
+        </button>
+       </div>
+    </nav>
+
+    <main class="js-products d-flex flex-wrap flex-row-reverse">
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="scripts/shopseed.js"></script>
+  </body>
+</html>
