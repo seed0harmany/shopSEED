@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles/checkout.css">
+  </head>
+  <body>
+    <header class="container d-flex align-items-center justify-content-between py-3 shadow-sm overflow-x-hidden position-fixed bg-body">
+      <a href="shopseed.html" class="d-flex align-items-center gap-1 text-black">
+        <img height="50px" class="rounded-5" src="images/logo/seed-logo (1).png" alt="">
+        <h5 class="position-relative fw-semibold">shopSEED<span class="text-success position-absolute">Harmany</span></h5>
+      </a>
+      <h3 class="fw-medium">Checkout (<a href="shopseed.html" class="text-success text-decoration-none total-cart-quantity"></a> )</h3>
+      <img src="images/icons/checkout-lock-icon.png" alt="">
+    </header>
+    
+    <section class="container mt-5">
+      <h2>Review your order</h2>
+      <div class="cart-details-container">
+        <div class="cart-summary js-cart-summary"></div>
+        
+        <div class="order-summary js-order-summary">
+            
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="scripts/checkout.js"></script>
+  </body>
+</html>

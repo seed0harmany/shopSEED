@@ -23,6 +23,23 @@ export function addToCart(productId) {
   saveToStorage();
 }
 
+export function updateCart(productId) {
+  const matchingProduct = cart.find(item => item.productId === productId);
+      if (!matchingProduct) return;
+  
+      const updateQuantity = prompt('Update Quantity', matchingProduct.quantity);
+      const newQuantity = Number(updateQuantity);
+      const isValid = updateQuantity !== null && updateQuantity.trim() !== '' && Number.isInteger(newQuantity) && newQuantity > 0 &&  newQuantity <= 1000;
+  
+      if (isValid) {
+        matchingProduct.quantity = newQuantity;
+        document.querySelector('.js-cart-quantity').textContent = newQuantity;
+        saveToStorage();
+      } else{
+        alert('Invalid Quantity')
+      }
+}
+
 export function removeFromCart(productId) {
   cart = cart.filter(item => item.productId !== productId);
   saveToStorage();

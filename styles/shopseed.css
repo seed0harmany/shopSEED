@@ -78,6 +78,10 @@ nav h5 span{
   opacity: 0;
 }
 
+.opacity1{
+  opacity: 1;
+}
+
 .added-to-cart img{
   height: 20px;
 }
@@ -116,7 +120,15 @@ nav h5 span{
 }
 
 /* End Navbar Session */
+main{
+  padding-top: 4.5em;
+}
 
+@media (max-width:768px) {
+  main{
+    padding-top: 7em;
+  }
+}
 .product {
   border-bottom: 1px solid gainsboro;
   border-right: 1px solid gainsboro;
@@ -177,7 +189,6 @@ nav h5 span{
   margin-bottom: 8px;
   line-height: 1.2;
   height: 40px;
-  display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;

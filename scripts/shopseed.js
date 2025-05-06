@@ -1,6 +1,6 @@
 import { addToCart, cart, saveToStorage, totalCartQuantity } from "./data/cart.js";
 import { products } from "./data/product.js";
-import { formatCurrency } from "./utils/money.js";
+import  formatCurrency  from "./utils/money.js";
 
 updateCartQuantity();
 let productListHTML = '';
@@ -28,7 +28,7 @@ products.forEach((product)=>{
       <option value="9">9</option>
       <option value="10">10</option>
       </select>
-      <div class="added-to-cart d-flex">
+      <div class="added-to-cart js-added-to-cart-${product.id} d-flex">
       <img class="me-1" src="images/icons/checkmark.png" alt="">
       Added
       </div>
@@ -42,10 +42,25 @@ products.forEach((product)=>{
 document.querySelector('.js-products').innerHTML = productListHTML;
 
 document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
+  let addedMessageTimeout;
   button.addEventListener('click', ()=>{
     const {productId} = button.dataset;
     addToCart(productId)
     updateCartQuantity();
+
+    const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+    addedMessage.classList.add('opacity1');
+    
+    const previousTimeoutId = addedMessageTimeout;
+    if (previousTimeoutId) {
+      clearTimeout(previousTimeoutId)
+    }
+
+    const timeoutId = setTimeout(() => {
+      addedMessage.classList.remove('opacity1')
+    }, 2000);
+
+    addedMessageTimeout = timeoutId;
   });
 });
 
