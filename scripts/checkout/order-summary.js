@@ -40,10 +40,13 @@ export function renderOrderSummary() {
               <span class="text-danger-emphasis">Order total:</span>
               <span class="text-danger-emphasis">$${formatCurrency(orderTotal)}</span>
             </div>
-            <button class="btn btn-warning w-100">Place your order</button>
+            <button class="btn btn-warning w-100 js-place-order">Place your order</button>
     `
     document.querySelector('.js-order-summary').innerHTML = html;
     console.log(orderTotal);
     
+   document.querySelector('.js-place-order').addEventListener('click', ()=>{
+    window.location.href = 'order.html'
+   })
    
   }

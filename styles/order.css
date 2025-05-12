@@ -1,0 +1,135 @@
+.container{
+  max-width: 900px;
+  padding-top: 2.5em;
+}
+.container h4{
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+@media (max-width:768px) {
+  .container{
+    padding-top: 5em;
+  }
+}
+
+.order-heading{
+  background-color: rgb(240, 239, 239);
+  padding: 1em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid gainsboro;
+  display: grid;
+  grid-template-columns: 140px auto 1fr;
+}
+
+.order-heading > div{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.order-heading > div:last-of-type{
+  margin-left: auto;
+}
+
+@media (max-width:590px) {
+  .order-heading{
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .order-heading > div:last-of-type{
+    margin-left: 0;
+  }
+}
+
+.order-body{
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  padding-block: 2em;
+  border-bottom: 1px solid gainsboro;
+  border-inline: 1px solid gainsboro;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.order-body img{
+  max-height: 120px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.order-body > div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.order-body > div .d-flex{
+ align-items: start;
+}
+
+
+.order-body > div div:last-of-type{
+  display: flex;
+  justify-content: center;
+  align-self: self-start;
+}
+
+.order-body > div div:last-of-type button{
+  padding-inline: 3em;
+}
+
+.order-body h5{
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+@media (max-width:768px) {
+  .order-body{
+    grid-template-columns: 160px 1fr;
+  }
+
+  .order-body > div{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .order-body > div div:last-of-type{
+    justify-content: start;
+  }
+
+  .order-body > div div:last-of-type button{
+    padding-inline: 1em;
+  }
+
+  .order-body h5{
+    height: 40px;
+  }
+}
+
+@media (max-width:425px) {
+  .order-body{
+    grid-template-columns: 1fr;
+    padding-inline: 1.3em;
+  }
+
+  .order-body > div .d-flex{
+    align-items: stretch;
+    margin-top: 1em;
+   }
+  
+   .order-body .btn{
+    width: 100%;
+   }
+}
+
