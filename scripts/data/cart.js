@@ -52,3 +52,8 @@ export function totalCartQuantity() {
   });
   return cartQuantity;
 }
+
+export function clearCartAfterOrder() {
+  cart = [];
+  saveToStorage();
+}

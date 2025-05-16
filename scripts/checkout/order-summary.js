@@ -1,5 +1,6 @@
-import { cart, totalCartQuantity } from "../data/cart.js";
+import { cart, clearCartAfterOrder, totalCartQuantity } from "../data/cart.js";
 import { deliveryOptions } from "../data/deliveryoption.js";
+import { addToOrder } from "../data/order.js";
 import { products } from "../data/product.js";
 import formatCurrency from "../utils/money.js";
 
@@ -45,8 +46,23 @@ export function renderOrderSummary() {
     document.querySelector('.js-order-summary').innerHTML = html;
     console.log(orderTotal);
     
-   document.querySelector('.js-place-order').addEventListener('click', ()=>{
-    window.location.href = 'order.html'
+   document.querySelector('.js-place-order').addEventListener('click', async ()=>{
+     const response = await fetch('https://supersimplebackend.dev/orders', {
+      method: 'POST',
+      headers: {
+         'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        cart: cart
+      })
+     })
+     
+     const order = await response.json();
+     addToOrder(order);
+     clearCartAfterOrder();
+     
+     
+    window.location.href = 'order.html';
    })
    
   }

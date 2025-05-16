@@ -20,7 +20,8 @@
   border-top-right-radius: 10px;
   border: 1px solid gainsboro;
   display: grid;
-  grid-template-columns: 140px auto 1fr;
+  grid-template-columns: 160px auto 1fr;
+  margin-top: 1em;
 }
 
 .order-heading > div{
@@ -46,37 +47,43 @@
 
 .order-body{
   display: grid;
-  grid-template-columns: 160px 1fr;
-  padding-block: 2em;
+  grid-template-columns: 130px 1fr;
+  padding: 2em 1em;
   border-bottom: 1px solid gainsboro;
   border-inline: 1px solid gainsboro;
   border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px
+}
+
+.img-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .order-body img{
-  max-height: 120px;
-  max-width: 100%;
-  margin: 0 auto;
+  max-height: 130px;
+  max-width: 130px;
 }
 
-.order-body > div{
+.order-body > .div{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-left: 2em;
 }
 
-.order-body > div .d-flex{
+.order-body > .div .d-flex{
  align-items: start;
 }
 
 
-.order-body > div div:last-of-type{
+.order-body > .div div:last-of-type{
   display: flex;
   justify-content: center;
   align-self: self-start;
 }
 
-.order-body > div div:last-of-type button{
+.order-body > .div div:last-of-type button{
   padding-inline: 3em;
 }
 
@@ -95,20 +102,21 @@
 
 @media (max-width:768px) {
   .order-body{
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 110px 1fr;
   }
 
-  .order-body > div{
+  .order-body > .div{
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    margin-left: 3em;
   }
 
-  .order-body > div div:last-of-type{
+  .order-body > .div div:last-of-type{
     justify-content: start;
   }
 
-  .order-body > div div:last-of-type button{
+  .order-body > .div div:last-of-type button{
     padding-inline: 1em;
   }
 
@@ -120,12 +128,16 @@
 @media (max-width:425px) {
   .order-body{
     grid-template-columns: 1fr;
-    padding-inline: 1.3em;
+    padding: 2em;
+  }
+
+  .order-body > .div{
+    margin-left: 0;
   }
 
   .order-body > div .d-flex{
     align-items: stretch;
-    margin-top: 1em;
+    margin-top: 1.5em;
    }
   
    .order-body .btn{
