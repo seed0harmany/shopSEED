@@ -52,7 +52,9 @@ function displayOrderProduct(order) {
       </button>
     </div>
     <div>
-      <button class="btn btn-light shadow-sm border border-secondary-subtle">Track Package</button>
+        <a href="tracking.html?orderId=${order.id}&&productId=${matchingProduct.id}" class="btn btn-light shadow-sm border border-secondary-subtle">
+          Track Package
+        </a>
     </div>
    </div>
     

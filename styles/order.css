@@ -83,7 +83,7 @@
   align-self: self-start;
 }
 
-.order-body > .div div:last-of-type button{
+.order-body > .div div:last-of-type a{
   padding-inline: 3em;
 }
 

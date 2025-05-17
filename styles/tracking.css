@@ -1,0 +1,19 @@
+.container{
+  max-width: 1000px;
+}
+
+.progress-bar-container {
+  height: 25px;
+  width: 100%;
+
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: green;
+  border-radius: 50px;
+  width: 50%;
+}
