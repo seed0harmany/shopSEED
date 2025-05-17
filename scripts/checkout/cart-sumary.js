@@ -12,12 +12,7 @@ export function renderCartSummary(params) {
   cart.forEach((cartItem) => {
     const { productId } = cartItem;
 
-    let matchingProduct;
-    products.forEach((product) => {
-      if (productId === product.id) {
-        matchingProduct = product;
-      }
-    });
+    const matchingProduct = products.find(product => product.id === productId)
     
     const deliveryOption = deliveryOptions.find(option => option.id === cartItem.deliveryOptionId);
     const safeDeliveryDate  = deliveryOption || deliveryOptions[0]
